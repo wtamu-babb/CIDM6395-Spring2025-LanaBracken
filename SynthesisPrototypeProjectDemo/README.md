@@ -4,7 +4,7 @@ This folder contains the full deliverable prototype for the Capstone Project: **
 
 ## Project Overview
 
-This project demonstrates the integration of Data Analytics, Data Management, Software Systems, and Cybersecurity concepts from the WTAMU MS-CISBA program. The prototype is designed to help users track and optimize bank account bonus offers.
+This project demonstrates the integration of Data Analytics, Data Management, Software Systems, and Cybersecurity concepts from the WTAMU MS-CISBA program. This prototype gathers active bank account bonus offers from public sources and applies a structured scoring system to recommend the most attractive offers based on a user’s personal effort preferences. Future enhancements are planned to add fund rotation optimization and automated tracking of account milestones.
 
 The project includes:
 - A fully working Jupyter/Colab notebook
