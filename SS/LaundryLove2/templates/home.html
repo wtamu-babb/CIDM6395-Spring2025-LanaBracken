@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}! 
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+  <p><a href="{% url 'password_change'%}">Change Password</a></p>
+{% else %}
+  <!--<p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a> |
+  <a href="{% url 'signup' %}">Sign Up</a> -->
+{% endif %}
+<body>
+  {% if messages %}
+  {% for message in messages %}
+   {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+  
+  {% endfor %}
+  
+  {% endif %}
+  <h1>Welcome to Laundry Love of the Texas Panhandle!</h1>
+  <h2>What is Laundry Love? It is a movement spreading love, one load of laundry at a time.  Volunteers gather local laundromats and offer to pay for laundry services. Laundry Love events are advertised with flyers at the laundromats, social media, and this website. Events usually last around 2 hours. </h2>
+   <br> 
+   <h2> Participation is easy! If you would benefit from free laundry service, show up to the event with your dirty clothes and bedding. If you would like to volunteer, fill out our contact form and we will be in touch. We love volunteers! </h2>
+   <br>
+   <div class="container">
+    <div class="row">
+      <div class="col-md-4 px-0">
+      
+        <img src="/static/images/LaundryLoveEvent.png" class="img-fluid" title="Laundry Love event" alt="Laundry Love event kids">
+      </div>
+      <div class="col-sm">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0">Laundry Love washes the clothes and bedding of low/no income families and person(s) across the US. We brighten the lives of thousands of people through love, dignity, and detergent by partnering with diverse groups of laundromats nationwide.</p>
+          <br>
+          <footer class="blockquote-footer"> <cite title="LaundryLove.org"><a href="https://laundrylove.org/" class="link-secondary" target="_blank">LaundryLove.org</a></cite></footer>
+        </blockquote> 
+      </div>
+      
+    </div>
+    
+</div>
+   
+  <br>
+  </body>
+{% endblock content %}
